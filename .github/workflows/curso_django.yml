@@ -33,6 +33,8 @@ jobs:
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: |
           pipenv install --deploy --dev
+      
+      - name: Pipenv Sync
         run: |
           pipenv sync --dev
       
