@@ -40,4 +40,4 @@ jobs:
       
       - name: Test With Flake8
         run: |
-          flake8 .
+          pipenv run flake8 .
