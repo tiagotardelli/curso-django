@@ -39,4 +39,5 @@ jobs:
           pipenv sync --dev
       
       - name: Test With Flake8
-        run: flake8 .
+        run: |
+          flake8 .
