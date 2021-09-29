@@ -9,6 +9,7 @@ flake8 = "*"
 [packages]
 django = "*"
 gunicorn = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.9"
