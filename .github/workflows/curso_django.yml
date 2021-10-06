@@ -29,16 +29,17 @@ jobs:
           key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
  
       - name: Install dependencies 
-        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+#        if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: |
           pipenv install --deploy --dev
           pipenv sync --dev
-          cp contrib/env-sample .env
+          cat contrib/env-sample >> .env
       
       - name: Test With Flake8
-        run: |
-          pipenv run flake8 .
+        run: pipenv run flake8 .
 
       - name: Test With Pytest
-        run: | 
-          pipenv run pytest
+        run: pipenv run pytest --cov=pypro
+
+      - name: codecov
+        run: pipenv run codecov
