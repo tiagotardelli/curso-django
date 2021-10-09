@@ -13,6 +13,7 @@ django = "*"
 gunicorn = "*"
 python-decouple = "*"
 pytest-django = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.9"
