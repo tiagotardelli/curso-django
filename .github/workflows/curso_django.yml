@@ -51,8 +51,8 @@ jobs:
       - name: Test With Flake8
         run: flake8
 
-      - name: Test With Pytest
-        run: pytest --cov=pypro
+#      - name: Test With Pytest
+#        run: pytest --cov=pypro
 
-      - name: codecov
-        run: codecov
+#      - name: codecov
+#        run: codecov
